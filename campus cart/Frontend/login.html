@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Cart - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: black;
+        }
+
+        .login-container {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(255,255,255,0.1);
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            position: relative;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .login-header h1 {
+            color: black;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .login-header p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #444;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            background-color: white;
+            color: black;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: white;
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.2);
+        }
+
+        .form-group label {
+            position: absolute;
+            top: -8px;
+            left: 10px;
+            background: whitesmoke;
+            padding: 0 5px;
+            font-size: 12px;
+            color: #aaa;
+            transition: all 0.3s ease;
+        }
+
+        .login-btn {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .login-btn:hover {
+            background-color: #b71c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .forgot-password a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password a:hover {
+            color: #aaa;
+            text-decoration: underline;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .signup-link a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .error-message {
+            color: #ff4444;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                margin: 20px;
+                padding: 30px 20px;
+            }
+        }
+        /* .logo {
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    width: 100px; 
+    height: auto;
+} */
+    </style>
+</head>
+<body>
+    <!-- <div class="login-header">
+        <img src="C:\Users\abc\Desktop\campus cart\images\image.png" alt="Campus Cart Logo" class="logo">
+        
+    </div> -->
+    <div class="login-container">
+        <div class="login-header">
+            <h1>Campus Cart</h1>
+            <p>Sell and buy items within your campus community</p>
+        </div>
+        <form id="login-form" class="login-form">
+            <div class="form-group">
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    placeholder=" "
+                >
+                <label for="email">Campus Email</label>
+            </div>
+            <div class="form-group">
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    required 
+                    placeholder=" "
+                >
+                <label for="password">Password</label>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <div id="error-message" class="error-message">
+                Invalid email or password
+            </div>
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <div class="signup-link">
+                Don't have an account? <a href="file:///C:/Users/abc/Desktop/campus%20cart/index.html" style="color: gray;">Sign Up</a>
+            </div>
+        </form>
+    </div>
+
+    
+</body>
+</html>

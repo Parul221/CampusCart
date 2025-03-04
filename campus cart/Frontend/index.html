@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Cart - Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+
+        .signup-container {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(255,255,255,0.1);
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            position: relative;
+        }
+
+        .signup-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .signup-header h1 {
+            color: black;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .signup-header p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            position: relative;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #444;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            background-color: white;
+            color: black;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: white;
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.2);
+        }
+
+        .form-group label {
+            position: absolute;
+            top: -8px;
+            left: 10px;
+            background: whitesmoke;
+            padding: 0 5px;
+            font-size: 12px;
+            color: #aaa;
+            transition: all 0.3s ease;
+        }
+
+        .signup-btn {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .signup-btn:hover {
+            background-color: #b71c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .login-link a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .error-message {
+            color: #ff4444;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            .signup-container {
+                margin: 20px;
+                padding: 30px 20px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        .campus-validation {
+            background-color: #222;
+            border: 1px solid #444;
+            border-radius: 6px;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+    <!-- Rest of the HTML remains the same as the previous signup page -->
+    <!-- Only the styling has been updated to match the black theme -->
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-header">
+            <h1>Create Account</h1>
+            <p>Join Campus Cart and start buying and selling</p>
+        </div>
+        <form id="signup-form" class="signup-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="first-name" 
+                        name="first-name" 
+                        required 
+                        placeholder=" "
+                    >
+                    <label for="first-name">First Name</label>
+                </div>
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="last-name" 
+                        name="last-name" 
+                        required 
+                        placeholder=" "
+                    >
+                    <label for="last-name">Last Name</label>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 20px;">
+                <input 
+                    type="email" 
+                    id="campus-email" 
+                    name="campus-email" 
+                    required 
+                    placeholder=" "
+                >
+                <label for="campus-email">Campus Email</label>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required 
+                        placeholder=" "
+                        minlength="8"
+                    >
+                    <label for="password">Password</label>
+                </div>
+                <div class="form-group">
+                    <input 
+                        type="password" 
+                        id="confirm-password" 
+                        name="confirm-password" 
+                        required 
+                        placeholder=" "
+                        minlength="8"
+                    >
+                    <label for="confirm-password">Confirm Password</label>
+                </div>
+            </div>
+
+            <div class="campus-validation" style="border-color: aliceblue; background-color: lightgray; color: #222;">
+                ✓ Must use a valid campus email address
+                ✓ Password must be at least 8 characters
+                ✓ All fields are required
+            </div>
+
+            <button type="submit" class="signup-btn">Create Account</button>
+
+            <div id="error-message" class="error-message">
+                Please check your information and try again
+            </div>
+
+            <div class="login-link">
+                Already have an account? <a href="file:///C:/Users/abc/Desktop/campus%20cart/Frontend/login.html" style="color: gray;">Login</a>
+            </div>
+        </form>
+    </div>
+
+   
+</body>
+</html>
